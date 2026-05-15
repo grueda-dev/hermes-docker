@@ -32,19 +32,22 @@ Inside the container shell:
 source .venv/bin/activate
 ```
 
-After activation, you can run the gateway command (the container itself starts with `gateway run`):
+After activation you can run the hermes command.
 
 ```bash
-gateway --help
-# or
-gateway run
+hermes --help
 ```
 
-If you are specifically looking for a `hermes` command, check whether it exists in the venv:
+The first command should be configure your hermes by going through the setup wizard:
 
 ```bash
-command -v hermes
-hermes --help
+hermes setup
+```
+
+It is also strongly recommended to configure the holographic memory with:
+
+```bash
+hermes memory setup
 ```
 
 ## URLs
