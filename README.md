@@ -50,6 +50,12 @@ It is also strongly recommended to configure the holographic memory with:
 hermes memory setup
 ```
 
+To configure a new messaging connection run:
+
+```bash
+hermes gateway setup
+```
+
 ## URLs
 
 - Gateway API: `http://localhost:8642/`
