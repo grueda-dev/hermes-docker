@@ -1,6 +1,27 @@
 # Dilly (Hermes Gateway)
 
-This repo runs the `nousresearch/hermes-agent:latest` container via Docker Compose.
+This repo runs the `docker.io/nousresearch/hermes-agent:latest` container via Docker Compose.
+
+## .env (recommended)
+
+Docker Compose will automatically load a `.env` file from the repo root (same folder as `docker-compose.yml`).
+
+Create `.env` with at least:
+
+```bash
+OPENROUTER_API_KEY=...  # required
+HERMES_UID=1000
+HERMES_GID=1000
+```
+
+Set `HERMES_UID`/`HERMES_GID` to match the user on the host. This ensures the container creates/owns files in `./projects` and `./hermes` using *your* UID/GID, so you can modify them from outside the container.
+
+On Linux/macOS (or inside WSL):
+
+```bash
+id -u
+id -g
+```
 
 ## Start the container
 
