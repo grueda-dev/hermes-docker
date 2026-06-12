@@ -81,3 +81,7 @@ hermes gateway setup
 
 - Gateway API: `http://localhost:8642/`
 - Dashboard: `http://localhost:9119/`
+
+## Random notes
+The agent's home directory in the container is actually /opt/data/home.   So if you want to do things
+like storing git credentials, you should do it in /opt/data/home/.git-credentials. 
